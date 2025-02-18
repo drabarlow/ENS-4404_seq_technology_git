@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sequencing Technologies</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Sequencing Technologies">
+  <meta name="author" content="Dr Axel Barlow">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/zenburn.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/custom.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+    
+  <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='300px' src="assets/img/A1_FullColour.svg">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  
+  <aside class="gdbar">
+    <img src="assets/img/LA_Full_colour_reversed.svg">
+  </aside>
+  
+  <hgroup class="auto-fadein">
+    <h1>Sequencing Technologies</h1>
+    <h2>ENS-4404 Genetics and the Conservation of small populations</h2>
+    <p>Dr Axel Barlow<br/>email: a.barlow.@bangor.ac.uk</p>
+  </hgroup>
+  
+  <article></article>  
+      
+  <footer class = 'license'>
+    <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>
+    <img width = '80px' src = 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png'>
+    </a>
+  </footer>
+  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  
+  <article data-timings="">
+    <!-- adding bold and italic options -->
+
+<style>
+em {
+  font-style: italic
+}
+strong {
+  font-weight: bold;
+}
+</style>
+
+<h2>Conservation genomics at Bangor</h2>
+
+<p><img src="./assets/img/Bangor_rep_con.png" width="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  
+  <hgroup>
+    <h2>Sequencing Technologies</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>What do we sequence?</li>
+<li>Genome assemblies and genome resequencing</li>
+<li>Illumina</li>
+<li>Pac Bio</li>
+<li>Oxford Nanopore</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-3" style="background:;">
+  
+  <hgroup>
+    <h2>What do we sequence?</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  
+  <hgroup>
+    <h2>Your genome</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/het.svg" width="95%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  
+  <hgroup>
+    <h2>Molecular markers</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p>Multiple methods exist for determining genotypes at genetic loci  </p>
+
+<ul>
+<li>Allozymes</li>
+<li>AFLPs</li>
+<li>RFLPs</li>
+<li>RAPDs</li>
+<li>Microsatellites</li>
+<li>SNPs</li>
+</ul>
+
+<p>SNPs require <strong>genotyping by sequencing</strong> (GBS)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  
+  <hgroup>
+    <h2>SNPs (single nucleotide polymorphisms)</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/snp.svg" width="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  
+  <hgroup>
+    <h2>Getting SNPs: RADseq</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>RADseq: Restriction site associated DNA sequencing</li>
+</ul>
+
+<p><img src="./assets/img/RADseq_schematic.svg" width="85%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  
+  <hgroup>
+    <h2>Getting SNPs: SNP arrays</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Target pre-determined SNP panels</li>
+<li>Thousands of loci</li>
+<li>Humans </li>
+<li>Domesticated species</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/hires-beadchip-12-fan.jpg" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  
+  <hgroup>
+    <h2>Getting SNPs: Whole genome sequencing</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/het.svg" width="95%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-10" style="background:;">
+  
+  <hgroup>
+    <h2>Genome assemblies and resequencing</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  
+  <hgroup>
+    <h2>Genome assemblies</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Sequence reads assembled into a <strong>reference genome</strong></li>
+<li><em>de novo</em> genome assembly</li>
+<li>Typically a single individual</li>
+<li>Typically uses long read technology</li>
+<li>Modern methods recover both haplotypes</li>
+<li>Requires <strong>annotation</strong></li>
+</ul>
+
+<p>Several quality metrics:</p>
+
+<ul>
+<li>Scaffold/chromosome level</li>
+<li>Scaffold N50</li>
+<li>BUSCO</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/assembly.svg" width="80%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  
+  <hgroup>
+    <h2>Genome resequencing</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Sequencing reads mapped to an existing reference genome</li>
+<li>Easy to identify SNPs relative to reference, and to other samples</li>
+<li>Typically uses short read technology</li>
+<li>Much cheaper than <em>de novo</em> assembly</li>
+<li>Accuracy depends on the number of reads in the stack, termed <strong>depth</strong> or <strong>coverage</strong></li>
+<li>Particularly heterozygous positions</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/resequencing.svg" width="80%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  
+  <hgroup>
+    <h2>Genome resequencing</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/Screenshot from 2022-09-08 13-58-44.png" width="100%" style="display: block; margin: auto auto auto 0;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-14" style="background:;">
+  
+  <hgroup>
+    <h2>Illumina</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  
+  <hgroup>
+    <h2>Illumina</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/illumina.svg" width="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  
+  <hgroup>
+    <h2>Data output</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>Platform</th>
+<th>read pairs</th>
+<th>Read length</th>
+<th>data output</th>
+<th>Genome coverage</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>MiniSeq</td>
+<td>25 million</td>
+<td>2 x 150 bp</td>
+<td>7.5 Gb</td>
+<td>2 x</td>
+</tr>
+<tr>
+<td>MiSeq</td>
+<td>25 million</td>
+<td>2 x 300 bp</td>
+<td>15 Gb</td>
+<td>4 x</td>
+</tr>
+<tr>
+<td>NextSeq 550</td>
+<td>400 million</td>
+<td>2 x 150 bp</td>
+<td>120 Gb</td>
+<td>33 x</td>
+</tr>
+<tr>
+<td>NextSeq 2000</td>
+<td>900 million</td>
+<td>2 x 300 bp</td>
+<td>540 Gb</td>
+<td>150 x</td>
+</tr>
+<tr>
+<td>HiSeq X</td>
+<td>6 billion</td>
+<td>2 x 150 bp</td>
+<td>1.8 Tb</td>
+<td>500 x</td>
+</tr>
+<tr>
+<td>NovaSeq X Plus</td>
+<td>52 billion</td>
+<td>2 x 150 bp</td>
+<td>16 Tb*</td>
+<td>4444 x</td>
+</tr>
+</tbody></table>
+
+<ul>
+<li>*16 Tb = 16,000,000,000,000 bp</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  
+  <hgroup>
+    <h2>Sequencing by synthesis</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ol>
+<li>Sample preparation</li>
+<li>Bind DNA to flowcell, generate clusters</li>
+<li>Sequencing by synthesis</li>
+<li>Data analysis (in the machine)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  
+  <hgroup>
+    <h2>Sample preparation</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/library_molecule.svg" width="100%" style="display: block; margin: auto;" /></p>
+
+<p>*Indexes allow multiple samples to be sequenced at the same time</p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  
+  <hgroup>
+    <h2>Flow cell</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/flowcell.svg" width="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-20" style="background:white;">
+  
+  <hgroup>
+    <h2>Cluster generation</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/cluster.svg" width="70%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-21" style="background:white;">
+  
+  <hgroup>
+    <h2>Sequencing by synthesis</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/sbs.svg" width="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-22" style="background:white;">
+  
+  <hgroup>
+    <h2>Data analysis (in the machine)</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/dataanalysis.svg" width="85%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  
+  <hgroup>
+    <h2>Illumina summary</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>The current market leader</li>
+<li>Massive output</li>
+<li>High accuracy</li>
+<li>Many applications (genome resequencing, RADseq, transcriptomes, metabarcoding)</li>
+<li>Cheap (£8 per Gb)</li>
+<li>Major limitation is the read length</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-24" style="background:;">
+  
+  <hgroup>
+    <h2>PacBio</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-25" style="background:white;">
+  
+  <hgroup>
+    <h2>PacBio</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/revio_right_closed.jpg" width="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-26" style="background:white;">
+  
+  <hgroup>
+    <h2>Single Molecule, Real-Time (SMRT) sequencing</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/smrt_seq.svg" width="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  
+  <hgroup>
+    <h2>HiFi reads</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/HiFi-reads-img.svg" width="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-28" style="background:;">
+  
+  <hgroup>
+    <h2>PacBio summary</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>Single molecule sequencing (no cluster generation)</li>
+<li>Long reads (around 25 kb)</li>
+<li>75 Gb per SMRT Cell for Revio</li>
+<li>Fantastic for <strong>genome assemblies</strong></li>
+<li>Historically high sequencing error, solved by HiFi sequencing</li>
+<li>Still more expensive than Illumina (~£3k per SMRT cell with library prep) </li>
+<li>Price falling rapidly</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-29" style="background:;">
+  
+  <hgroup>
+    <h2>Oxford Nanopore</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-30" style="background:;">
+  
+  <hgroup>
+    <h2>Oxford Nanopore</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/nanopore.svg" width="100%" style="display: block; margin: auto auto auto 0;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-31" style="background:white;">
+  
+  <hgroup>
+    <h2>How it works</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/ont-sequencing_yourgenome.png" width="90%" style="display: block; margin: auto auto auto 0;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
+  
+  <hgroup>
+    <h2>Field based sequencing</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/41586_2016_Article_BFnature16996_Fig1_HTML.webp" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
+
+<p><em>Quick et al. 2016. Real-time, portable genome sequencing for Ebola surveillance. Nature</em></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-33" style="background:;">
+  
+  <hgroup>
+    <h2>Oxford Nanopore summary</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>Variable output, up to Tb&#39;s with larger platforms</li>
+<li>Long reads, record is 2.3 Mb!</li>
+<li>Output 20-30 Gb (up to 50 Gb) per Minion flow cell</li>
+<li>High error rate, currently 5-10 % but improving</li>
+<li>Still more expensive than Illumina and PacBio (~£750 for Minion flow cell and library prep)</li>
+<li>True portability and real time sequencing/analysis</li>
+<li>But need to buy sequencer: Minion £4,650 inc. 5 flow cells</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-34" style="background:;">
+  
+  <hgroup>
+    <h2>Recommended reading</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><embed src="./assets/img/Illumina Inc - 2013 - Illumina Sequencing Technology - YouTube.pdf" width="100%" height="500" type="application/pdf" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-35" style="background:;">
+  
+  <hgroup>
+    <h2>Recommended reading</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><embed src="./assets/img/Hu et al. - 2021 - Next-generation sequencing technologies An overview.pdf" width="100%" height="500" type="application/pdf" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
+  
+  <hgroup>
+    <h2>Recommended reading</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><embed src="./assets/img/Athanasopoulou et al. - 2022 - Third-Generation Sequencing The Spearhead towards the Radical Transformation of Modern Genomics.pdf" width="100%" height="500" type="application/pdf" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="thank-you-slide segue nobackground" id="slide-37">
+  <aside class="gdbar right"><img src="assets/img/LA_Full_colour_reversed.svg"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <h2>Next time:</h2>
+    <p><strong>How to design a genomics project</strong></p>
+
+  </article>
+
+  <p class="auto-fadein" data-config-contact="">
+    
+  </p>
+</slide>
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Sequencing Technologies'>
+         2
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='What do we sequence?'>
+         3
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Your genome'>
+         4
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Molecular markers'>
+         5
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='SNPs (single nucleotide polymorphisms)'>
+         6
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Getting SNPs: RADseq'>
+         7
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Getting SNPs: SNP arrays'>
+         8
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Getting SNPs: Whole genome sequencing'>
+         9
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Genome assemblies and resequencing'>
+         10
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Genome assemblies'>
+         11
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Genome resequencing'>
+         12
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Genome resequencing'>
+         13
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Illumina'>
+         14
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Illumina'>
+         15
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Data output'>
+         16
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Sequencing by synthesis'>
+         17
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Sample preparation'>
+         18
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Flow cell'>
+         19
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Cluster generation'>
+         20
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Sequencing by synthesis'>
+         21
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Data analysis (in the machine)'>
+         22
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Illumina summary'>
+         23
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='PacBio'>
+         24
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='PacBio'>
+         25
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Single Molecule, Real-Time (SMRT) sequencing'>
+         26
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='HiFi reads'>
+         27
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='PacBio summary'>
+         28
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='Oxford Nanopore'>
+         29
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='Oxford Nanopore'>
+         30
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='How it works'>
+         31
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='Field based sequencing'>
+         32
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='Oxford Nanopore summary'>
+         33
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='Recommended reading'>
+         34
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='Recommended reading'>
+         35
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Recommended reading'>
+         36
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Next time:'>
+         37
+      </a>
+    </li>
+    
+    </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

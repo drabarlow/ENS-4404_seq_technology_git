@@ -1,0 +1,374 @@
+---
+title       : "Sequencing Technologies"
+subtitle    : "ENS-4404 Genetics and the Conservation of small populations"
+author      : Dr Axel Barlow
+job         : "email: a.barlow.@bangor.ac.uk"
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : zenburn      # {zenburn, tomorrow, solarized-dark, ...}
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {selfcontained, standalone, draft}
+knit        : slidify::knit2slides
+logo        : LA_Full_colour_reversed.svg
+biglogo     : A1_FullColour.svg
+assets      : {assets: ../../assets}
+license     : by-nc-sa
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(RColorBrewer)
+library(knitr)
+```
+
+<!-- adding bold and italic options -->
+<style>
+em {
+  font-style: italic
+}
+strong {
+  font-weight: bold;
+}
+</style>
+
+## Conservation genomics at Bangor
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/Bangor_rep_con.png")
+```
+
+---
+
+## Sequencing Technologies
+
+- What do we sequence?
+- Genome assemblies and genome resequencing
+- Illumina
+- Pac Bio
+- Oxford Nanopore
+
+--- .segue .dark 
+
+## What do we sequence?
+
+---
+
+## Your genome
+
+```{r, out.width = "95%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/het.svg")
+```
+
+---
+
+## Molecular markers
+
+Multiple methods exist for determining genotypes at genetic loci  
+
+- Allozymes
+- AFLPs
+- RFLPs
+- RAPDs
+- Microsatellites
+- SNPs
+
+SNPs require **genotyping by sequencing** (GBS)
+
+---
+
+## SNPs (single nucleotide polymorphisms)
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/snp.svg")
+```
+
+---
+
+## Getting SNPs: RADseq
+
+- RADseq: Restriction site associated DNA sequencing
+
+```{r, out.width = "85%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/RADseq_schematic.svg")
+```
+
+--- &twocol
+
+## Getting SNPs: SNP arrays
+
+*** =left
+
+- Target pre-determined SNP panels
+- Thousands of loci
+- Humans 
+- Domesticated species
+
+*** =right
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/hires-beadchip-12-fan.jpg")
+```
+
+---
+
+## Getting SNPs: Whole genome sequencing
+
+```{r, out.width = "95%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/het.svg")
+```
+
+--- .segue .dark 
+
+## Genome assemblies and resequencing
+
+--- &twocol
+
+## Genome assemblies
+
+*** =left
+
+- Sequence reads assembled into a **reference genome**
+- *de novo* genome assembly
+- Typically a single individual
+- Typically uses long read technology
+- Modern methods recover both haplotypes
+- Requires **annotation**
+
+Several quality metrics:
+- Scaffold/chromosome level
+- Scaffold N50
+- BUSCO
+
+*** =right
+
+```{r, out.width = "80%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/assembly.svg")
+```
+
+--- &twocol
+
+## Genome resequencing
+
+*** =left
+
+- Sequencing reads mapped to an existing reference genome
+- Easy to identify SNPs relative to reference, and to other samples
+- Typically uses short read technology
+- Much cheaper than *de novo* assembly
+- Accuracy depends on the number of reads in the stack, termed **depth** or **coverage**
+- Particularly heterozygous positions
+
+*** =right
+
+```{r, out.width = "80%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/resequencing.svg")
+```
+
+---
+
+## Genome resequencing
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "left", fig.cap=""}
+  include_graphics("./assets/img/Screenshot from 2022-09-08 13-58-44.png")
+```
+
+--- .segue .dark 
+
+## Illumina
+
+---
+
+## Illumina
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/illumina.svg")
+```
+
+---
+
+## Data output
+
+Platform | read pairs | Read length | data output | Genome coverage
+---|---|---|---|---
+MiniSeq|25 million|2 x 150 bp|7.5 Gb|2 x
+MiSeq|25 million|2 x 300 bp|15 Gb|4 x
+NextSeq 550|400 million|2 x 150 bp|120 Gb|33 x
+NextSeq 2000|900 million|2 x 300 bp|540 Gb|150 x
+HiSeq X|6 billion|2 x 150 bp|1.8 Tb|500 x
+NovaSeq X Plus|52 billion|2 x 150 bp|16 Tb*|4444 x
+
+- *16 Tb = 16,000,000,000,000 bp
+
+---
+
+## Sequencing by synthesis
+
+1. Sample preparation
+2. Bind DNA to flowcell, generate clusters
+3. Sequencing by synthesis
+4. Data analysis (in the machine)
+
+---
+
+## Sample preparation
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/library_molecule.svg")
+```
+
+*Indexes allow multiple samples to be sequenced at the same time
+
+---
+
+## Flow cell
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/flowcell.svg")
+```
+
+--- bg:white
+
+## Cluster generation
+
+```{r, out.width = "70%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/cluster.svg")
+```
+
+--- bg:white
+
+## Sequencing by synthesis
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/sbs.svg")
+```
+
+--- bg:white
+
+## Data analysis (in the machine)
+
+```{r, out.width = "85%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/dataanalysis.svg")
+```
+
+---
+
+## Illumina summary
+
+- The current market leader
+- Massive output
+- High accuracy
+- Many applications (genome resequencing, RADseq, transcriptomes, metabarcoding)
+- Cheap (£8 per Gb)
+- Major limitation is the read length
+
+--- .segue .dark 
+
+## PacBio
+
+--- bg:white
+
+## PacBio
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/revio_right_closed.jpg")
+```
+
+--- bg:white
+
+## Single Molecule, Real-Time (SMRT) sequencing
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/smrt_seq.svg")
+```
+
+--- 
+
+## HiFi reads
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
+  include_graphics("./assets/img/HiFi-reads-img.svg")
+```
+
+---
+
+## PacBio summary
+
+- Single molecule sequencing (no cluster generation)
+- Long reads (around 25 kb)
+- 75 Gb per SMRT Cell for Revio
+- Fantastic for **genome assemblies**
+- Historically high sequencing error, solved by HiFi sequencing
+- Still more expensive than Illumina (~£3k per SMRT cell with library prep) 
+- Price falling rapidly
+
+--- .segue .dark 
+
+## Oxford Nanopore
+
+---
+
+## Oxford Nanopore
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "left", fig.cap=""}
+  include_graphics("./assets/img/nanopore.svg")
+```
+
+--- bg:white
+
+## How it works
+
+```{r, out.width = "90%", dpi = 300, echo = FALSE, fig.align = "left", fig.cap=""}
+  include_graphics("./assets/img/ont-sequencing_yourgenome.png")
+```
+
+---
+
+## Field based sequencing
+
+```{r, out.width = "65%", dpi = 300, echo = FALSE, fig.align = "left", fig.cap=""}
+  include_graphics("./assets/img/41586_2016_Article_BFnature16996_Fig1_HTML.webp")
+```
+
+*Quick et al. 2016. Real-time, portable genome sequencing for Ebola surveillance. Nature*
+
+---
+
+## Oxford Nanopore summary
+
+- Variable output, up to Tb's with larger platforms
+- Long reads, record is 2.3 Mb!
+- Output 20-30 Gb (up to 50 Gb) per Minion flow cell
+- High error rate, currently 5-10 % but improving
+- Still more expensive than Illumina and PacBio (~£750 for Minion flow cell and library prep)
+- True portability and real time sequencing/analysis
+- But need to buy sequencer: Minion £4,650 inc. 5 flow cells
+
+---
+
+## Recommended reading
+
+```{r, out.width = "100%", out.height=500, dpi = 300, echo = FALSE, fig.cap=""}
+include_graphics("./assets/img/Illumina Inc - 2013 - Illumina Sequencing Technology - YouTube.pdf")
+```
+
+---
+
+## Recommended reading
+
+```{r, out.width = "100%", out.height=500, dpi = 300, echo = FALSE, fig.cap=""}
+include_graphics("./assets/img/Hu et al. - 2021 - Next-generation sequencing technologies An overview.pdf")
+```
+
+---
+
+## Recommended reading
+
+```{r, out.width = "100%", out.height=500, dpi = 300, echo = FALSE, fig.cap=""}
+include_graphics("./assets/img/Athanasopoulou et al. - 2022 - Third-Generation Sequencing The Spearhead towards the Radical Transformation of Modern Genomics.pdf")
+```
+
+--- &thankyou
+
+## Next time:
+
+**How to design a genomics project**
