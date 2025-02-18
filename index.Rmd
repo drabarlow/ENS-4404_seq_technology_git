@@ -31,14 +31,6 @@ strong {
 }
 </style>
 
-## Conservation genomics at Bangor
-
-```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center", fig.cap=""}
-  include_graphics("./assets/img/Bangor_rep_con.png")
-```
-
----
-
 ## Sequencing Technologies
 
 - What do we sequence?
